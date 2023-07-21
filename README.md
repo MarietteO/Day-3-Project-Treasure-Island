@@ -7,3 +7,4 @@ Using docstrings<br>
 Using booleans<br>
 Using while loops<br>
 Using if/elif/else<br>
+Printing long strings<br>
