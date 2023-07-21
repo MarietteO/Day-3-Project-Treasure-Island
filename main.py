@@ -1,6 +1,8 @@
 game_on = True
 
+
 def direction():
+    """Asks the user to choose a direction (left or right) and handles their decision."""
     while True:
         direction_choice = input("Which way would you like to go? Type left or right: ").lower()
         if direction_choice == "right":
@@ -11,7 +13,9 @@ def direction():
         else:
             not_valid_answer()
 
+
 def action():
+    """Asks the user to choose an action (swim or wait) and handles their decision."""
     while True:
         action_choice = input("You reach a river. Do you want to swim or wait? Type swim or wait: ").lower()
         if action_choice == "swim":
@@ -22,7 +26,9 @@ def action():
         else:
             not_valid_answer()
 
+
 def choose_door():
+    """Asks the user to choose a door (red, blue, or yellow) and handles their decision."""
     while True:
         door_choice = input("While waiting, you spot three doors. Which door do you choose? Type red, blue,"
                             " or yellow: ").lower()
@@ -30,7 +36,8 @@ def choose_door():
             game_over("Oops! As you step through the door, you trigger a trap and get caught.")
             return False
         elif door_choice == "blue":
-            game_over("The blue door leads to a room filled with treasure, but it's protected by a fire-breathing dragon."
+            game_over("The blue door leads to a room filled with treasure, but it's protected by a fire-breathing "
+                      "dragon."
                       " You are toast!")
             return False
         elif door_choice == "yellow":
@@ -39,11 +46,16 @@ def choose_door():
         else:
             not_valid_answer()
 
+
 def not_valid_answer():
+    """Displays a message when the user enters an invalid response."""
     print("Argh! You're making me dizzy! Please choose a valid answer.")
 
+
 def game_over(reason):
+    """Prints the game over message with the provided reason."""
     print(f"{reason} Game over!")
+
 
 print('''
 *******************************************************************************
@@ -78,6 +90,3 @@ while game_on:
                 break
             break
         break
-    else:
-        break
-
