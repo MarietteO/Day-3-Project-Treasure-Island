@@ -8,3 +8,4 @@ Using booleans<br>
 Using while loops<br>
 Using if/elif/else<br>
 Printing long strings<br>
+Using .lower() to standardise input
