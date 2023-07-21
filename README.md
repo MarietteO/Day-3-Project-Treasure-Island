@@ -3,6 +3,7 @@
 <h3>Section 3: Day 3 - Beginner - Control Flow and Logical Operators</h3>
 <b>New skills demonstrated:</b><br>
 Defining and calling functions<br>
+Using docstrings<br>
 Using booleans<br>
 Using while loops<br>
 Using if/elif/else<br>
