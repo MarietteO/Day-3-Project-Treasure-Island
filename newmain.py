@@ -26,37 +26,28 @@ def ask(answer, answers):
         else:
             print("That is not a valid answer.")
 
-
 # Start the game by asking the first question.
 first_answer = questions_list[0]
 first_options = answers_list[0]
 step_one = ask(first_answer, first_options)
-
 # Check the user's answer for the first question.
 if step_one == "left":
     print(outcomes_dict[0])
-    loop = False
 elif step_one == "right":
     second_answer = questions_list[1]
     second_options = answers_list[1]
     step_two = ask(second_answer, second_options)
-
-    # Check the user's answer for the second question.
+# Check the user's answer for the second question.
     if step_two == "swim":
         print(outcomes_dict[1])
-        loop = False
     elif step_two == "wait":
         third_answer = questions_list[2]
         third_options = answers_list[2]
         step_three = ask(third_answer, third_options)
-
         # Check the user's answer for the third question.
         if step_three == "red":
             print(outcomes_dict[2])
-            loop = False
         elif step_three == "blue":
             print(outcomes_dict[3])
-            loop = False
         elif step_three == "yellow":
             print(outcomes_dict[4])
-            loop = False
