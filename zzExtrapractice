@@ -1,0 +1,52 @@
+# I wrote this simple quiz game for practice, following a similar logic to the solution in zfinalattempt for the treasure island game.
+# The ask() function checks if the option entered by the user was one of the given options and loops back to the current question if not.
+# game() does the rest.
+
+SCORE = 0
+
+quiz_questions = {
+    "What is the capital city of France? Please type a, b, c, or d: ": {
+        "options": ["a) Madrid", "b) Berlin", "c) Paris", "d) Rome"],
+        "answer": "c"
+    },
+    "Which planet is known as the Red Planet? Please type a, b, c, or d: ": {
+        "options": ["a) Earth", "b) Mars", "c) Jupiter", "d) Venus"],
+        "answer": "b"
+    },
+    "What is the largest mammal in the world? Please type a, b, c, or d: ": {
+        "options": ["a) African Elephant", "b) Giraffe", "c) Blue Whale", "d) Great White Shark"],
+        "answer": "c"
+    },
+    "Which programming language is known as the language of the web? Please type a, b, c, or d: ": {
+        "options": ["a) Python", "b) JavaScript", "c) C++", "d) Java"],
+        "answer": "b"
+    },
+    "What is the chemical symbol for water? Please type a, b, c, or d: ": {
+        "options": ["a) O2", "b) H", "c) H2O", "d) CO2"],
+        "answer": "c"
+    }
+}
+
+def ask(question):
+    while True:
+        user_response = input(question)
+        if user_response in ["a", "b", "c", "d"]:
+            return user_response
+        else:
+            print ("That is not a valid answer")
+
+def game():
+    for quiz_question in quiz_questions:
+        print(quiz_question)
+        options = (quiz_questions[quiz_question]["options"])
+        correct_answer = quiz_questions[quiz_question]["answer"]
+        if ask(options) == correct_answer:
+            print("That is correct")
+            global SCORE
+            SCORE += 1
+        else:
+            print("That is incorrect")
+    print(f"Your score is {SCORE}/5.")
+
+
+game()
